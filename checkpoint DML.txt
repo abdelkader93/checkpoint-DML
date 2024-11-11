@@ -1,0 +1,59 @@
+1. Insert Data into the CUSTOMER Table
+For the CUSTOMER table, based on the provided data, the SQL INSERT statement would look like this:
+
+INSERT INTO CUSTOMER (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany');
+
+INSERT INTO CUSTOMER (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico');
+
+INSERT INTO CUSTOMER (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico');
+
+
+2. Insert Data into the SUPPLIER Table
+For the SUPPLIER table:
+
+INSERT INTO SUPPLIER (SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country)
+VALUES (1, 'Exotic Liquids', 'Charlotte Cooper', '49 Gilbert St.', 'London', 'EC1 4SD', 'UK');
+
+INSERT INTO SUPPLIER (SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country)
+VALUES (2, 'New Orleans Cajun Delights', 'Yvonne Monette', 'P.O. Box 78934', 'New Orleans', 'LA 70117', 'USA');
+
+
+3. Insert Data into the PRODUCT Table
+For the PRODUCT table:
+
+INSERT INTO PRODUCT (ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, InStock)
+VALUES (1, 'Chef Anton\'s Cajun Seasoning', 2, 1, '48 boxes', 22.5, 53);
+
+INSERT INTO PRODUCT (ProductID, ProductName, SupplierID, CategoryID, QuantityPerUnit, UnitPrice, InStock)
+VALUES (2, 'Chef Anton\'s Gumbo Mix', 2, 2, '24 boxes', 21.25, 0);
+
+
+4. Insert Data into the CATEGORY Table
+For the CATEGORY table:
+INSERT INTO CATEGORY (CategoryID, CategoryName, Description)
+VALUES (1, 'Condiments', 'Sweet and spicy sauces and seasonings.');
+
+INSERT INTO CATEGORY (CategoryID, CategoryName, Description)
+VALUES (2, 'Confections', 'Candies, chocolates, and other sweet treats.');
+
+
+5. Insert Data into the ORDERS Table
+For the ORDERS table:
+
+INSERT INTO ORDERS (OrderID, CustomerID, OrderDate, ShipDate, Status)
+VALUES (1, 1, TO_DATE('2024-11-01', 'YYYY-MM-DD'), TO_DATE('2024-11-05', 'YYYY-MM-DD'), 'Shipped');
+
+INSERT INTO ORDERS (OrderID, CustomerID, OrderDate, ShipDate, Status)
+VALUES (2, 2, TO_DATE('2024-11-03', 'YYYY-MM-DD'), TO_DATE('2024-11-07', 'YYYY-MM-DD'), 'Pending');
+
+6. Insert Data into the ORDERDETAIL Table
+For the ORDERDETAIL table:
+
+INSERT INTO ORDERDETAIL (OrderDetailID, OrderID, ProductID, Quantity, UnitPrice, Discount)
+VALUES (1, 1, 1, 5, 22.5, 0.1);
+
+INSERT INTO ORDERDETAIL (OrderDetailID, OrderID, ProductID, Quantity, UnitPrice, Discount)
+VALUES (2, 2, 2, 3, 21.25, 0.2);
